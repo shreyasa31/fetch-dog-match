@@ -1,0 +1,22 @@
+.search-page {
+    padding: 20px;
+    background-color: #f9fafb;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .dog-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .pagination {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+  }
+  

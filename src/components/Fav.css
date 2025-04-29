@@ -1,0 +1,16 @@
+.favorites-box {
+    margin-top: 20px;
+    background-color: #fef3c7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .favorites-box button {
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

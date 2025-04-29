@@ -1,0 +1,29 @@
+.dog-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 10px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .dog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .dog-card .favorite {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  
+  .dog-card .unfavorite {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  
