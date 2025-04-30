@@ -19,7 +19,7 @@ function Login() {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true, // ✅ THIS LINE is the fix
+          withCredentials: true, 
         }
       );
       navigate('/search');
