@@ -1,33 +1,79 @@
-.login-container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #f3f3f3;
+/* Background with gradient and snowy vibe */
+.login-bg {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('bg7.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+/* Glassmorphism effect */
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;               
+  max-width: 380px;         
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px 0 rgba(45, 45, 51, 0.37);
+  color: rgb(17, 17, 17);
+  text-align: center;
+  margin-bottom: 200px;    
+}
+
+/* Glassmorphism effect */
+/* .glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px 0 rgba(45, 45, 51, 0.37);
+  color: rgb(17, 17, 17);
+  text-align: center;
+} */
+
+/* Input styles */
+.glass-box input {
+  margin: 15px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Button styles */
+.glass-box button {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  color: #131313;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.glass-box button:hover {
+  background-color: #dcdcdc;
+}
+
+@media (max-width: 400px) {
+  .glass-box {
+    padding: 20px;
   }
-  
-  .login-box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-  }
-  
-  .login-box input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .login-box button {
-    padding: 10px;
-    background-color: #3b82f6;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
+}

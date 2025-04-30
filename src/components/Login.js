@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import api from '../api';
 import { useNavigate } from 'react-router-dom';
+import api from '../api';
 import './Login.css';
 
 function Login() {
@@ -11,20 +11,31 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await api.post('/auth/login', { name, email });
+      // await api.post('/auth/login', { name, email });
+      await api.post(
+        '/auth/login',
+        { name, email },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          withCredentials: true, // ✅ THIS LINE is the fix
+        }
+      );
       navigate('/search');
     } catch (error) {
-      alert('Login failed. Please check credentials.');
+      alert('Login failed. Please check your credentials.');
     }
   };
 
   return (
-    <div className="login-container">
-      <form className="login-box" onSubmit={handleLogin}>
-        <h2>Login</h2>
+    <div className="login-bg">
+       {/* <img src="/bg3.jpg" alt="dogs" className="bg-image" /> */}
+      <form className="glass-box" onSubmit={handleLogin}>
+        <h2>WELCOME!!</h2>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Username"
           onChange={(e) => setName(e.target.value)}
           required
         />

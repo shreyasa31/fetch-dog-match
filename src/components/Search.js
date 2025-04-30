@@ -52,40 +52,77 @@ function Search() {
   };
 
   
+  // return (
+  //   <div className="search-page">
+  //     <div className="controls">
+  //       <select onChange={(e) => setSelectedBreed(e.target.value)}>
+  //         <option value="">All Breeds</option>
+  //         {breeds.map((b) => (
+  //           <option key={b} value={b}>{b}</option>
+  //         ))}
+  //       </select>
+
+  //       <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+  //         Sort: {sortOrder}
+  //       </button>
+  //     </div>
+
+  //     <div className="dog-list">
+  //       {dogs.map((dog) => (
+  //         <DogCard
+  //           key={dog.id}
+  //           dog={dog}
+  //           toggleFavorite={toggleFavorite}
+  //           isFavorite={favorites.includes(dog.id)}
+  //         />
+  //       ))}
+  //     </div>
+
+  //     <div className="pagination">
+  //       <button onClick={() => setFrom(Math.max(0, from - size))}>Prev</button>
+  //       <button onClick={() => setFrom(from + size)}>Next</button>
+  //     </div>
+
+  //     <Fav favorites={favorites} getMatch={getMatch} />
+  //   </div>
+  // );
   return (
-    <div className="search-page">
-      <div className="controls">
-        <select onChange={(e) => setSelectedBreed(e.target.value)}>
-          <option value="">All Breeds</option>
-          {breeds.map((b) => (
-            <option key={b} value={b}>{b}</option>
+    <div className="search-bg">
+      <div className="search-page">
+        <div className="controls">
+          <select onChange={(e) => setSelectedBreed(e.target.value)}>
+            <option value="">All Breeds</option>
+            {breeds.map((b) => (
+              <option key={b} value={b}>{b}</option>
+            ))}
+          </select>
+  
+          <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+            Sort: {sortOrder}
+          </button>
+        </div>
+  
+        <div className="dog-list">
+          {dogs.map((dog) => (
+            <DogCard
+              key={dog.id}
+              dog={dog}
+              toggleFavorite={toggleFavorite}
+              isFavorite={favorites.includes(dog.id)}
+            />
           ))}
-        </select>
-
-        <button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
-          Sort: {sortOrder}
-        </button>
+        </div>
+  
+        <div className="pagination">
+          <button onClick={() => setFrom(Math.max(0, from - size))}>Prev</button>
+          <button onClick={() => setFrom(from + size)}>Next</button>
+        </div>
+  
+        <Fav favorites={favorites} getMatch={getMatch} />
       </div>
-
-      <div className="dog-list">
-        {dogs.map((dog) => (
-          <DogCard
-            key={dog.id}
-            dog={dog}
-            toggleFavorite={toggleFavorite}
-            isFavorite={favorites.includes(dog.id)}
-          />
-        ))}
-      </div>
-
-      <div className="pagination">
-        <button onClick={() => setFrom(Math.max(0, from - size))}>Prev</button>
-        <button onClick={() => setFrom(from + size)}>Next</button>
-      </div>
-
-      <Fav favorites={favorites} getMatch={getMatch} />
     </div>
   );
+  
 }
 
 export default Search;
