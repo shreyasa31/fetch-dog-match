@@ -1,4 +1,4 @@
-.dog-card {
+/* .dog-card {
     border: 1px solid #ccc;
     padding: 16px;
     border-radius: 10px;
@@ -25,5 +25,63 @@
     color: white;
     padding: 8px;
     margin-top: 10px;
+  }
+   */
+
+   .dog-card {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 100%;           /* ✅ Allows it to stretch in a responsive container */
+    max-width: 250px;      /* ✅ But limits it to a clean card size */
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+  }
+  
+  
+  .dog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .dog-info {
+    padding: 16px;
+  }
+  
+  .dog-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .dog-info p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  /* Heart favorite icon */
+  .fav-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: transform 0.2s;
+  }
+  
+  .fav-icon:hover {
+    transform: scale(1.2);
   }
   
